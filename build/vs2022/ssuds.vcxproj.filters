@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\ssuds">
+      <UniqueIdentifier>{8acac818-ebc3-43aa-9b22-1465e3da3a51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\misc">
+      <UniqueIdentifier>{deda9492-37de-484d-9233-b4a0b8ac8bc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ssuds_testing">
+      <UniqueIdentifier>{c6d12673-d43e-471a-80f4-8550f4c4be4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\misc">
+      <UniqueIdentifier>{e06cba86-2fb2-4362-babf-ebc4e1575ea7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sf">
+      <UniqueIdentifier>{f1c1f618-e625-4f83-8821-ee707097eafe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\sf">
+      <UniqueIdentifier>{ba50d7ed-6299-4811-b725-907bf960da72}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ssuds\array_list_tests.cpp">
+      <Filter>Source Files\ssuds_testing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ssuds\array_list_utility_tests.cpp">
+      <Filter>Source Files\ssuds_testing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ssuds\linked_list_tests.cpp">
+      <Filter>Source Files\ssuds_testing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ssuds\ordered_set_tests.cpp">
+      <Filter>Source Files\ssuds_testing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\misc\word_drawer.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ssuds\queues_tests.cpp">
+      <Filter>Source Files\ssuds_testing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ssuds\stack_tests.cpp">
+      <Filter>Source Files\ssuds_testing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ssuds\unordered_map_tests.cpp">
+      <Filter>Source Files\ssuds_testing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\misc\word_reader.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sf\text_circle.cpp">
+      <Filter>Source Files\sf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ssuds\graph_tests.cpp">
+      <Filter>Source Files\ssuds_testing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\misc\visual_graph.cpp">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\ssuds\array_list.h">
+      <Filter>Header Files\ssuds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ssuds\array_list_utility.h">
+      <Filter>Header Files\ssuds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ssuds\linked_list.h">
+      <Filter>Header Files\ssuds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ssuds\ordered_set.h">
+      <Filter>Header Files\ssuds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ssuds\queue.h">
+      <Filter>Header Files\ssuds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ssuds\stack.h">
+      <Filter>Header Files\ssuds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\misc\word_drawer.h">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\misc\word_reader.h">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sf\text_circle_graph.h">
+      <Filter>Header Files\sf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sf\text_circle.h">
+      <Filter>Header Files\sf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sf\graph.h">
+      <Filter>Header Files\ssuds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ssuds\unordered_map.h">
+      <Filter>Header Files\ssuds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\misc\visual_graph.h">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
