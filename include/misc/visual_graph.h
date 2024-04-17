@@ -8,6 +8,7 @@
 #include <graph.h>
 #include <fstream>
 #include <string>
+#include <text_circle.h>
 
 namespace misc
 {
@@ -55,5 +56,14 @@ namespace misc
 		/// <param name="fname">filename (and path info) to load</param>
 		/// <returns></returns>
 		void load(const std::string& fname);
+
+		void print_trav(std::map<int, float>& traversal_map);
+
+		void breadth_first(std::map<int, float>& traversal_map, int start_node);
+
+		void depth_first(std::map<int, float>& traversal_map, int start_node, int cur_node);
+
+		bool mouse_check(sf::Vector2f mouse_pos);
+
 	};
 }

@@ -1,0 +1,6 @@
+﻿  main.cpp
+  visual_graph.cpp
+C:\Users\nweller\source\repos\GraphTraversal\src\misc\visual_graph.cpp(151,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\nweller\source\repos\GraphTraversal\src\misc\visual_graph.cpp(181,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+  ssuds.vcxproj -> C:\Users\nweller\source\repos\GraphTraversal\bin\vs2022\Debug\ssuds_d.exe

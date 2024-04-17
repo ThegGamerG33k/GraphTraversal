@@ -25,6 +25,7 @@ int main()
         std::cout << "Error loading fonts\n";
 
     misc::VisualGraph GC(circle_font, "../../../media/output.txt");
+    std::map<int, float> trav;
 
 
 
@@ -36,6 +37,20 @@ int main()
             if (event.type == sf::Event::Closed || 
                 (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape))
                 window.close();
+
+            if (event.type == sf::Event::MouseButtonPressed)
+            {
+                if (event.mouseButton.button == sf::Mouse::Left)
+                {
+                    for()
+
+                    GC.breadth_first(trav, 0);
+                }
+                if (event.mouseButton.button == sf::Mouse::Right)
+                {
+                    GC.depth_first(trav, 0, -1);
+                }
+            }
         }
 
         window.clear();

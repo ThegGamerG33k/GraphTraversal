@@ -118,3 +118,87 @@ void misc::VisualGraph::load(const std::string& fname)
 		}
 	}
 }
+
+void misc::VisualGraph::print_trav(std::map<int, float>& traversal_map)
+{
+	std::map<int, float>::iterator mit = traversal_map.begin();
+	while (mit != traversal_map.end())
+	{
+		std::cout << (*mit).first << ": " << (*mit).second << std::endl;
+		++mit;
+	}
+}
+
+void misc::VisualGraph::breadth_first(std::map<int, float>& traversal_map, int start_node)
+{
+	ssuds::ArrayList<int> frontier = { start_node };
+	traversal_map[start_node] = -1;
+	while (frontier.size() > 0)
+	{
+		ssuds::ArrayList<int> new_frontier = {};
+
+		for (unsigned int i = 0; i < frontier.size(); i++)
+		{
+			ssuds::UnorderedMap<int, ssuds::UnorderedMap<int, float>>::UnorderedMapIterator it = mInternalGraph.find(frontier[i]);
+			if (it != mInternalGraph.end())
+			{
+				int cur_node = frontier[i];
+				for (std::pair<int, float> p : (*it).second)
+				{
+					int id = p.first;
+					if (traversal_map.find(id) == traversal_map.end())
+					{
+						traversal_map[id] = cur_node;
+						std::cout << cur_node;
+						new_frontier.append(id);
+					}
+				}
+			}
+		}
+		frontier = new_frontier;
+	}
+	print_trav(traversal_map);
+}
+
+
+void misc::VisualGraph::depth_first(std::map<int, float>& traversal_map, int start_node, int cur_node = -1)
+{
+	if (cur_node == -1)
+	{
+		traversal_map[start_node] = -1;
+		depth_first(traversal_map, start_node, start_node);
+	}
+	else
+	{
+		ssuds::UnorderedMap<int, ssuds::UnorderedMap<int, float>>::UnorderedMapIterator it = mInternalGraph.find(cur_node);
+		if (it != mInternalGraph.end())
+		{
+			for (std::pair<int, float> p : (*it).second)
+			{
+				int id = p.first;
+				if (traversal_map.find(id) == traversal_map.end())
+				{
+					traversal_map[id] = cur_node;
+					depth_first(traversal_map, start_node, id);
+				}
+			}
+		}
+	}
+	print_trav(traversal_map);
+}
+
+bool misc::VisualGraph::mouse_check(sf::Vector2f mouse_pos)
+{
+	ssuds::UnorderedMap<int, sf::TextCircle>::UnorderedMapIterator it = mCircleData.begin();
+	if (it != mCircleData.end())
+	{
+		if ((*it).second.point_inside(mouse_pos))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}
