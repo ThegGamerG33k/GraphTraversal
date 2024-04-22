@@ -129,6 +129,13 @@ void misc::VisualGraph::print_trav(std::map<int, float>& traversal_map)
 	}
 }
 
+
+/// <summary>
+/// This function will perform breadth first traversal for the given set of nodes and edges. It will start from the 
+/// starting node and move one pass of edges each time until all branches are reached
+/// </summary>
+/// <param name="traversal_map">A temporary map to hold the travel history of the function</param>
+/// <param name="start_node">Tells the function what node to start at</param>
 void misc::VisualGraph::breadth_first(std::map<int, float>& traversal_map, int start_node)
 {
 	ssuds::ArrayList<int> frontier = { start_node };
@@ -160,7 +167,14 @@ void misc::VisualGraph::breadth_first(std::map<int, float>& traversal_map, int s
 	print_trav(traversal_map);
 }
 
-
+/// <summary>
+/// This function performs a depth first movement through the given set of nodes and edges. This function
+/// will move through each node recursively until it reaches a node with no edges to move through. Then it
+/// will step back and explore any branches that were not explored through the recursive calls.
+/// </summary>
+/// <param name="traversal_map">A temporary map to hold the travel history of the function</param>
+/// <param name="start_node">tells the function where to begin</param>
+/// <param name="cur_node">a dummy value that tells the function where it currently is</param>
 void misc::VisualGraph::depth_first(std::map<int, float>& traversal_map, int start_node, int cur_node = -1)
 {
 	if (cur_node == -1)
@@ -187,6 +201,13 @@ void misc::VisualGraph::depth_first(std::map<int, float>& traversal_map, int sta
 	print_trav(traversal_map);
 }
 
+/// <summary>
+/// This function checks to see where the mouse is positioned on the screen and checks to see if it is located within one of the nodes
+/// on click using the point_inside function
+/// </summary>
+/// <param name="mouse_pos">the mouse position as passed through sfml</param>
+/// <returns>bool of whether the mouse was inside a node or not, should later return the node id for the node that was pressed
+/// or return nothing if it didn't click a node</returns>
 bool misc::VisualGraph::mouse_check(sf::Vector2f mouse_pos)
 {
 	ssuds::UnorderedMap<int, sf::TextCircle>::UnorderedMapIterator it = mCircleData.begin();

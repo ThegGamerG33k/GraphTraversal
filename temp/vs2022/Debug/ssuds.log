@@ -1,6 +1,7 @@
 ﻿  main.cpp
   visual_graph.cpp
-C:\Users\nweller\source\repos\GraphTraversal\src\misc\visual_graph.cpp(151,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\nweller\source\repos\GraphTraversal\src\misc\visual_graph.cpp(181,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\welle_489k6yj\Source\Repos\GraphTraversal\src\misc\visual_graph.cpp(158,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\welle_489k6yj\Source\Repos\GraphTraversal\src\misc\visual_graph.cpp(195,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   Generating Code...
-  ssuds.vcxproj -> C:\Users\nweller\source\repos\GraphTraversal\bin\vs2022\Debug\ssuds_d.exe
+C:\Users\welle_489k6yj\Source\Repos\GraphTraversal\src\misc\visual_graph.cpp(225): warning C4715: 'misc::VisualGraph::mouse_check': not all control paths return a value
+  ssuds.vcxproj -> C:\Users\welle_489k6yj\source\repos\GraphTraversal\bin\vs2022\Debug\ssuds_d.exe

@@ -28,7 +28,6 @@ int main()
     std::map<int, float> trav;
 
 
-
     while (window.isOpen())
     {
         sf::Event event;
@@ -42,8 +41,6 @@ int main()
             {
                 if (event.mouseButton.button == sf::Mouse::Left)
                 {
-                    for()
-
                     GC.breadth_first(trav, 0);
                 }
                 if (event.mouseButton.button == sf::Mouse::Right)
